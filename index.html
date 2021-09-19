@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/images/starting-page-logo.svg"
+      type="image/x-icon"
+    />
+    <title>კითხვარი</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/bower_components/bpg-glaho/css/bpg-glaho.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bar">
+      <img src="/images/rectangle.svg" alt="" />
+    </div>
+    <img src="/images/the-end-star.png" class="topStar endStar" alt="star" />
+    <h1 class="heading">მადლობა</h1>
+    <img src="/images/the-end-star.png" class="botStar endStar" alt="star" />
+    <div class="main">
+      <div class="start">
+        <img src="/images/starting-page-logo.svg" alt="" class="enter" />
+        <div class="startBox">
+          <span class="startText"> კითხვარის დაწყება </span>
+        </div>
+      </div>
+      <div class="header">
+        <img src="/images/redberry-logotype.svg" alt="logo" />
+        <span class="pageSteps">1/4</span>
+      </div>
+      <div class="firstPage">
+        <div class="identityMid">
+          <form id="activeForm" novalidate>
+            <label for="name">
+              <span>სახელი*</span>
+              <input
+                type="text"
+                data-name="სახელი"
+                class="firstInputs"
+                name="name"
+                id="name"
+                placeholder="იოსებ"
+              />
+              <span class="message"></span>
+            </label>
+            <label for="lastName">
+              <span>გვარი*</span>
+              <input
+                type="text"
+                name="lastName"
+                data-name="გვარი"
+                class="firstInputs"
+                id="lastName"
+                placeholder="ჯუღაშვილი"
+              />
+              <span class="message"></span>
+            </label>
+            <label for="email">
+              <span>მეილი*</span>
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                class="firstInputs"
+                placeholder="fbi@redberry.com"
+              />
+              <span class="message"></span>
+            </label>
+            <div class="warning">
+              <hr />
+              <span>*-ით მონიშნული ველების შევსება სავალდებულოა</span>
+            </div>
+          </form>
+          <img
+            src="/images/first-page-vector.svg"
+            class="mainImg"
+            alt="firstPage image"
+          />
+        </div>
+      </div>
+      <div class="secondPage">
+        <div class="secondPageQuestion">
+          <p>გაქვს გადატანილი Covid-19?*</p>
+          <label class="container"
+            >კი
+            <input type="radio" class="radios" id="yesCovid" name="covid" />
+            <span class="check"></span>
+          </label>
+          <label class="container"
+            >არა
+            <input type="radio" id="noCovid" class="radios" name="covid" />
+            <span class="check"></span>
+          </label>
+          <label class="container"
+            >ახლა მაქვს
+            <input type="radio" id="haveNow" class="radios" name="covid" />
+            <span class="check"></span>
+          </label>
+          <div class="addFirst">
+            <p>ანტისხეულების ტესტი გაქვს გაკეთებული?</p>
+            <label class="container"
+              >კი
+              <input
+                type="radio"
+                name="antibodies"
+                class="radios"
+                id="antibodiesYes"
+              />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >არა
+              <input
+                type="radio"
+                name="antibodies"
+                class="radios"
+                id="noAntibodies"
+              />
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="addSecondYes">
+            <p>
+              თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და
+              ანტისხეულების რაოდენობა*
+            </p>
+            <input
+              placeholder="რიცხვი"
+              class="inputsToCheck"
+              type="text"
+              class="radios"
+              onfocus="(this.type = 'date')"
+              id="date"
+            />
+            <input
+              type="number"
+              min="1"
+              class="inputsToCheck"
+              placeholder="ანტისხეულების რაოდენობა"
+            />
+          </div>
+          <div class="addSecondNo">
+            <p>
+              მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელე) როდის გქონდა Covid-19*
+            </p>
+            <input
+              placeholder="დდ/თთ/წწ"
+              type="text"
+              class="inputsToCheck"
+              onfocus="(this.type = 'date')"
+              id="covidDate"
+            />
+          </div>
+        </div>
+        <img src="/images/vaccinate2.svg" class="mainImg" alt="" />
+      </div>
+      <div class="thirdPage">
+        <div class="vaccinateQuestion">
+          <p>უკვე აცრილი ხარ?*</p>
+          <label class="container"
+            >კი
+            <input
+              type="radio"
+              class="radios"
+              id="vaccinateYesRadio"
+              name="vaccinateYesNo"
+            />
+            <span class="check"></span>
+          </label>
+          <label class="container"
+            >არა
+            <input
+              type="radio"
+              class="radios"
+              id="vaccinateNoRadio"
+              name="vaccinateYesNo"
+            />
+            <span class="check"></span>
+          </label>
+          <div class="vaccinateYes">
+            <p>აირჩიე რომელ ეტაპზე ხარ:*</p>
+            <label class="container"
+              >პირველი დოზა და დარეგისტრირებული ვარ მეორეზე
+              <input
+                type="radio"
+                class="radios"
+                id="secondRegistered"
+                name="vaccinate"
+              />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >სრულად ვაქცინირებული ვარ
+              <input
+                type="radio"
+                class="radios"
+                id="fullVaccinated"
+                name="vaccinate"
+              />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე
+              <input
+                type="radio"
+                class="radios"
+                id="noSecondRegistered"
+                name="vaccinate"
+              />
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="vaccinateNo">
+            <p>რას ელოდები?</p>
+            <label class="container"
+              >დარეგისტრირებული ვარ და ველოდები თარიღს
+              <input
+                type="radio"
+                class="radios"
+                id="registeredWaiting"
+                name="vaccinate"
+              />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >არ ვგეგმავ
+              <input
+                type="radio"
+                class="radios"
+                id="noPlans"
+                name="vaccinate"
+              />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >გადატანილი მაქვს და ვგეგმავ აცრას
+              <input
+                type="radio"
+                class="radios"
+                id="planningVaccinate"
+                name="vaccinate"
+              />
+              <span class="check"></span>
+            </label>
+          </div>
+          <p class="registerNow">
+            რომ არ გადადო, ბარემ ახლავე დარეგისტრირდი
+            <a href="https://booking.moh.gov.ge/" target="_blank"
+              >https://booking.moh.gov.ge/</a
+            >
+          </p>
+          <p class="noPlanning">
+            👉<a href="https://booking.moh.gov.ge/" target="_blank"
+              >https://booking.moh.gov.ge/</a
+            >
+          </p>
+          <p class="planning">
+            ახალი პროტოკოლით კოვიდის გადატანიდან 1 თვის შემდეგ შეგიძლიათ
+            ვაქცინის გაკეთება.
+            <br />
+            👉 რეგისტრაციის ლინკი -
+            <a href="https://booking.moh.gov.ge/" target="_blank"
+              >https://booking.moh.gov.ge/</a
+            >
+          </p>
+        </div>
+        <img src="/images/doctor2.svg" class="mainImg" alt="" />
+      </div>
+      <div class="final">
+        <form class="finalForm" novalidate>
+          <p>
+            რედბერის მთავარი ღირებულება ჩვენი გუნდის თითოეული წევრია. გარემო,
+            რომელსაც ჩვენი თანამშრომლები ქმნით ბევრისთვის არის და ყოფილა წლების
+            განმავლობაში ერთად მიზნებისთვის ბრძოლის მიზეზი, ბევრისთვის კი -
+            ჩვენთან გადმოსვლის.
+          </p>
+          <p>
+            პანდემიის პერიოდში ერთმანეთსაც იშვიათად ვნახულობთ პირისპირ და
+            ყოველდღიური კომუნიკაციაც გაიშვიათდა.
+          </p>
+          <span class="finalQuestion">
+            რა სიხშირით შეიძლება გვქონდეს საერთო არაფორმალური ონლაინ შეხვედრები,
+            სადაც ყველა სურვილისამებრ ჩაერთვება?*
+          </span>
+          <label class="container"
+            >კვირაში ორჯერ
+            <input type="radio" class="radios" required name="meeting" />
+            <span class="check"></span>
+          </label>
+          <label class="container"
+            >კვირაში ერთხელ
+            <input type="radio" class="radios" name="meeting" />
+            <span class="check"></span>
+          </label>
+          <label class="container"
+            >ორ კვირაში ერთხელ
+            <input type="radio" class="radios" name="meeting" />
+            <span class="check"></span>
+          </label>
+          <label class="container"
+            >თვეში ერთხელ
+            <input type="radio" class="radios" name="meeting" />
+            <span class="check"></span>
+          </label>
+          <span class="finalQuestion"
+            >კვირაში რამდენი დღე ისურვებდი ოფისიდან მუშაობას?*</span
+          >
+          <div class="radiosNumber">
+            <label class="container"
+              >0
+              <input type="radio" class="radios" required name="office" />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >1
+              <input type="radio" class="radios" name="office" />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >2
+              <input type="radio" class="radios" name="office" />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >3
+              <input type="radio" class="radios" name="office" />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >4
+              <input type="radio" class="radios" name="office" />
+              <span class="check"></span>
+            </label>
+            <label class="container"
+              >5
+              <input type="radio" class="radios" name="office" />
+              <span class="check"></span>
+            </label>
+          </div>
+          <span class="finalQuestion">რას ფიქრობ ფიზიკურ შეკრებებზე?</span>
+          <textarea name="contact" id="contact"></textarea>
+          <span class="finalQuestion">
+            რას ფიქრობ არსებულ გარემოზე: <br />
+            რა მოგწონს, რას დაამატებდი, რას შეცვლიდი?
+          </span>
+          <textarea name="" id=""></textarea>
+
+          <input type="submit" value="დასრულება" id="finish" />
+          <button id="btn" class="finalBack">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+        </form>
+        <img src="/images/bike.svg" class="mainImg" alt="" />
+      </div>
+      <div class="footer">
+        <div class="footerCenter">
+          <button id="btn" class="back">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button id="btn" type="submit" class="forward" form="activeForm">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
